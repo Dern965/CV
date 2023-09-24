@@ -204,3 +204,29 @@ body::selection {
 .social-media li:hover a {
   font-weight: 800;
 }
+
+/*-------- Responsividad--------*/
+@media screen and (max-width: 767px){
+  #header{
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .navbar-title{
+    margin-top: 10px;
+  }
+
+  .navbar-menu{
+    flex-direction: column;
+  }
+
+  .navbar-menu li{
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .social-media{
+    margin-top: 15px;
+  }
+}
