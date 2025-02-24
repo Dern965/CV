@@ -85,4 +85,136 @@ input,
 textarea,
 button{
     outline: none;
+    border: none;
+}
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img,
+svg{
+    max-width: 100%;
+    height: auto;
+} 
+
+/*======== REUSABLES ========*/
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section{
+    padding-block: 5rem 2rem;
+}
+
+.section__title,
+.section__subtitle{
+    text-align: center;
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.section__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.5rem;
+}
+
+.section__subtitle{
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.section__subtitle span{
+    color: var(--first-color);
+}
+
+.main{
+    overflow: hidden; /* For animations ScrollReveal */
+}
+
+/*======== HEADER & NAV ========*/
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--container-color);
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo span{
+    color: var(--first-color);
+}
+
+.nav__toggle,
+.nav__close{
+    display: flex;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+/*======== NAVIGATION FOR MOBILES ========*/
+@media screen and (max-width:1023px){
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: hsla(0,0%,10%,.3);
+        width: 75%;
+        height: 100%;
+        padding: 4.5rem 0 0 3rem;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition: right .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav__link{
+    color: var(--title-color);
+    font-size: var(--font-medium);
+    transition: color .4s;
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.naav__close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
 }
